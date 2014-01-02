@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+var guypos = 0;
+var otherguypos = 0; 
+$(document).ready(function(){
+	$("#guy").click(function(){
+		$(this).attr("src","guyhide.png");
+	});
+	$("#otherguy").click(function(){
+		$(this).attr("src","otherguyhide.png");
+	});
+    $("#House").mouseenter(function(){
+		alert("Get out out of here!");
+	});
+	guypos += 1500;
+	pospx = {'left' : guypos};
+	$("#div1").delay(1000).animate(pospx,4000);
+	guypos -= 1500;
+	pospx = {'left' : guypos};
+	$("#div1").animate(pospx,2000);
+	
+	otherguypos += 2000;
+	pospx = {'left' : otherguypos};
+	$("#div2").animate(pospx,5000);
+	otherguypos -= 2000;
+	pospx = {'left' : otherguypos};
+	$("#div2").animate(pospx,5000);
+});
+</script>
+<style type="text/css"> 
+div
+{
+background:#98bf21;height:100px;width:100px;position:absolute;
+}
+#div2
+{
+top:400px;
+}
+#hdiv
+{
+position:absolute;
+top:800px;
+}
+</style>
+</head>
+<body>
+<div id="div1">
+<img id="guy" src="guy.png">
+</div>
+<div id="div2">
+<img id="otherguy" src="otherguy.png">
+</div>
+<div id="hdiv">
+<img id="House" src="House.png">
+<p>Mr. Wilson's House</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+	$("#l1").delay(1).animate({'left' : 100},2000);
+	$("#l2").delay(2000).animate({'left' : 200},2000);
+	$("#l3").delay(4000).animate({'left' : 300},2000);
+	$("#r1").delay(1).animate({'left' : 400},2000);
+	$("#r2").delay(2000).animate({'left' : 400},2000);
+	$("#r3").delay(4000).animate({'left' : 400},2000);
+	$("#panel").delay(6000).slideDown("slow");
+	$("#redone").delay(7000).slideDown("medium");
+	$("#last").delay(8000).slideDown("medium");
+});
+</script>
+<style type="text/css"> 
+div
+{
+background:#98bf21;height:100px;width:100px;position:absolute;
+}
+#l2
+{
+top:100px;
+}
+#l3
+{
+top:200px;
+}
+#r1
+{
+left:500px;
+}
+#r2
+{
+top:100px;
+left:500px;
+}
+#r3
+{
+top:200px;
+left:500px;
+}
+#panel
+{
+top:300px;
+width:500px;
+text-align:center;
+background-color:yellow;
+display:none;
+}
+#redone
+{
+top:400px;
+width:500px;
+text-align:center;
+background-color:red;
+display:none;
+}
+#last
+{
+top:500px;
+width:400px;
+background-color:#99CCFF;
+padding:50px;
+display:none;
+}
+</style>
+</head>
+<body>
+<div id="l1">
+</div>
+<div id="r1">
+</div>
+<div id="l2">
+</div>
+<div id="r2">
+</div>
+<div id="l3">
+</div>
+<div id="r3">
+</div>
+<div id="panel">Hey</div>
+<div id="redone">There!</div>
+<div id="last">Beautiful</div>
+</body>
+</html>
