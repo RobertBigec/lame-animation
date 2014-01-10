@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function() {
+	var currentdelay = 0;
+	var frametime = 2500;
+	var effecttime = 1000;
+	
+	$("#img1").fadeIn().delay(frametime).fadeOut();
+	$("#div1").slideDown("fast").delay(frametime).slideUp("fast");
+	
+	currentdelay += frametime + effecttime;
+	$("#img2").delay(currentdelay).fadeIn().delay(frametime).fadeOut();
+	$("#div2").delay(currentdelay).slideDown("fast").delay(frametime).slideUp("fast");
+	
+	currentdelay += frametime + effecttime;
+	$("#img3").delay(currentdelay).fadeIn().delay(frametime).fadeOut();
+	$("#div3").delay(currentdelay).slideDown("fast").delay(frametime).slideUp("fast");
+
+	currentdelay += frametime + effecttime;
+	$("#img4").delay(currentdelay).fadeIn().delay(frametime).fadeOut();
+	$("#div4").delay(currentdelay).slideDown("fast").delay(frametime).slideUp("fast");
+});
+</script>
+<style type="text/css">
+h1
+{
+	font-size:25px;
+}
+img
+{
+	display:none;
+}
+.flow
+{
+	margin-left:10px;
+	width:640px;
+	text-align:center;
+}
+.frame
+{
+background:white;
+height:480px;
+border-style:inset;
+border-width:25px;
+border-color:#8F3926;
+}
+.caption
+{
+background:#ffffcc;
+padding:25px;
+display:none;
+}
+</style>
+</head>
+<body>
+<h1 class="flow">Love</h1>
+
+<div class="flow frame">
+<img id="img1" src="http://inspirationaldaily.files.wordpress.com/2012/05/love-inspirational-daily.jpeg" width="640" height="480">
+<img id="img2" src="http://kindnessblogdotcom1.files.wordpress.com/2013/06/rak4.jpg" width="640" height="480">
+<img id="img3" src="http://kabenlah.com/wp-content/uploads/2013/11/envy.jpg" width="640" height="480">
+<img id="img4" src="http://www.sea-ex.com/recreational1/brag.h1.jpg" width="640" height="480">
+</div>
+
+<div id="div1" class="flow caption">
+is patient
+</div>
+<div id="div2" class="flow caption">
+is kind
+</div>
+<div id="div3" class="flow caption">
+does not envy
+</div>
+<div id="div4" class="flow caption">
+does not boast
+</div>
+
+
+</body>
+</html>
